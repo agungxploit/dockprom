@@ -1,3 +1,4 @@
+# agungxpoit
 global:
   scrape_interval:     15s
   evaluation_interval: 15s
@@ -34,6 +35,32 @@ scrape_configs:
     static_configs:
       - targets: ['pushgateway:9091']
 
+# Apache Servers
+  - job_name: apache1
+    static_configs:
+      - targets: ['10.103.105.10:9117']
+        labels:
+          alias: virtualmin
+
+  - job_name: apache2
+    static_configs:
+      - targets: ['10.103.105.17:9117']
+        labels:
+          alias: xampp
+# Zimbra Servers
+  - job_name: mail
+    static_configs:
+      - targets: ['10.103.105.5:8086']
+        labels:
+          alias: zimbra
+
+
+# MySQL
+  - job_name: mysql_server1
+    static_configs:
+      - targets: ['10.103.105.10:9104']
+        labels:
+          alias: db1
 
 alerting:
   alertmanagers:
@@ -51,3 +78,4 @@ alerting:
 #    scrape_interval: 10s
 #    static_configs:
 #      - targets: ['eventlog-proxy:5000', 'eventlog:5000']
+
