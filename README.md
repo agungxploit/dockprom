@@ -1,5 +1,6 @@
 dockprom
 ========
+Original: https://github.com/stefanprodan/dockprom
 
 A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
 [NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
@@ -11,7 +12,7 @@ A monitoring solution for Docker hosts and containers with [Prometheus](https://
 Clone this repository on your Docker host, cd into dockprom directory and run compose up:
 
 ```bash
-git clone https://github.com/stefanprodan/dockprom
+git clone https://github.com/agungxploit/dockprom
 cd dockprom
 
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
